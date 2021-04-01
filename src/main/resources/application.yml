@@ -1,0 +1,23 @@
+#端口配置
+server:
+  port: 8088
+#jdbc配置
+spring:
+  datasource:
+    name: clodsw-portal-dev
+    url: jdbc:mysql://192.168.2.28:3306/cloudsw_portal?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&autoReconnect=true&allowPublicKeyRetrieval=true
+    username: cloudsw_portal2019
+    password: cloudsw_portal2019
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#mybatis配置
+mybatis:
+  #实体类所在包名
+  type-aliases-package: com.cloudsw.dto
+  # 配置打印日志，打印SQL语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#通用mapper配置
+mapper:
+  #公用接口类路径
+  mappers: com.cloudsw.base.IBaseMapper
+  identity: MYSQL
